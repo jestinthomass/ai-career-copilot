@@ -1,0 +1,313 @@
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #f1f5f9;
+  background: #0b1020;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.app-shell {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 24px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #29334d;
+}
+
+.topbar h2 {
+  margin: 0;
+  color: #a5b4fc;
+  font-size: 22px;
+}
+
+.topbar > span,
+.user-controls > span {
+  color: #aab5ca;
+  font-size: 13px;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logout-button {
+  border: 1px solid #39445e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #151e34;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 48px 0 32px;
+}
+
+.eyebrow {
+  color: #a5b4fc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -1.5px;
+}
+
+.hero > p:last-child {
+  color: #aab5ca;
+  line-height: 1.6;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.panel,
+.results,
+.skill-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #29334d;
+  border-radius: 16px;
+  background: #121a2f;
+  box-sizing: border-box;
+}
+
+.panel h2,
+.results h2 {
+  margin-top: 0;
+}
+
+.panel label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #dbe4f4;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panel input[type="file"] {
+  width: 100%;
+  color: #aab5ca;
+  font-size: 12px;
+}
+
+.panel textarea {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  border: 1px solid #34415e;
+  border-radius: 9px;
+  outline: none;
+  resize: vertical;
+  background: #0d1427;
+  color: #f8fafc;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.panel textarea:focus {
+  border-color: #818cf8;
+}
+
+.helper,
+.disclaimer {
+  color: #aab5ca;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.analyze-button {
+  min-height: 46px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #818cf8, #6366f1);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analyze-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.suggestions-button {
+  border: 1px solid #46537a;
+  background: #192544;
+}
+
+.success-message {
+  color: #86efac;
+  font-size: 13px;
+}
+
+.error-message {
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.results {
+  margin: 24px 0;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 0 12px;
+}
+
+.score strong {
+  color: #a5b4fc;
+  font-size: 44px;
+}
+
+.score span {
+  color: #aab5ca;
+  font-size: 13px;
+}
+
+.score-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #29334d;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #818cf8, #34d399);
+  transition: width 0.3s ease;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  margin-top: 16px;
+}
+
+.skill-grid .skill-card {
+  margin-top: 0;
+}
+
+.skill-card h3 {
+  margin-top: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.chip.matched {
+  background: #123a34;
+  color: #86efac;
+}
+
+.chip.missing {
+  background: #42242d;
+  color: #fda4af;
+}
+
+.skill-card p,
+.skill-card li {
+  color: #c4cee0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.skill-card ul {
+  padding-left: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 28px 0;
+  color: #8390aa;
+  font-size: 12px;
+}
+
+@media (max-width: 720px) {
+  .workspace,
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    width: min(100% - 24px, 1100px);
+  }
+
+  .panel,
+  .results,
+  .skill-card {
+    padding: 18px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .user-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 460px) {
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-actions button {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
